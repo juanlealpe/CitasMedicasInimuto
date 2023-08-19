@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">150%</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary</item>
+        <!--toolbar, primaryColor en tema claro, surfaceColor en tema oscuro-->
+        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
+    </style>
+
+
+
+
+    <style name="AppTheme.Counter" parent="TextAppearance.Design.Counter">
+        <item name="android:textColor">@android:color/holo_green_dark</item>
+    </style>
+
+    <style name="AppTheme.CounterOverFlow" parent="TextAppearance.Design.Counter.Overflow">
+        <item name="android:textColor">@android:color/holo_green_dark</item>
+    </style>
+</resources>

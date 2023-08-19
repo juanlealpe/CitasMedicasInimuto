@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CitasMedicasInimuto</string>
+    <string name="title_app">Citas Medicas </string>
+    <string name="ingresar">Ingrisar </string>
+
+    <string name="user"> Correo </string>
+    <string name="password">Contraseña </string>
+    <string name="text_error">Campo requerido </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_dasd_board">DasdBoardActivity</string>
+    <string name="title_home">Perfil Usuario </string>
+    <string name="title_dashboard">Agenda tu cita</string>
+    <string name="title_notifications">Historial de citas</string>
+
+    <string name="descripction"> Descripción </string>
+    <string name="fecha"> Fecha </string>
+    <string name="Especialidad"> Especialidad  </string>
+    <string name="clinica"> Clinica  </string>
+
+    <string name="guardar">Agendar </string>
+    <string name="bienvenido">Bienvenido </string>
+
+
+</resources>
