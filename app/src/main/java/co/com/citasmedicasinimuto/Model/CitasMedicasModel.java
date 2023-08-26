@@ -4,17 +4,27 @@ public class CitasMedicasModel {
 
 
 
+
+    int id;
     String fecha;
     String description;
     String clinica;
     String direccion;
     String especializacion;
-     public CitasMedicasModel(String fecha, String description, String clinica, String direccion, String especializacion) {
+    /* public CitasMedicasModel(String fecha, String description, String clinica, String direccion, String especializacion) {
         this.fecha = fecha;
         this.description = description;
         this.clinica = clinica;
         this.direccion = direccion;
         this.especializacion = especializacion;
+    }*/
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     public String getFecha() {
         return fecha;

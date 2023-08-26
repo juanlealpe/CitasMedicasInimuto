@@ -10,16 +10,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import co.com.citasmedicasinimuto.Controler.UserController;
 import co.com.citasmedicasinimuto.Model.CitasMedicasModel;
 import co.com.citasmedicasinimuto.R;
 
 public class NotificacionAdapter  extends RecyclerView.Adapter<NotificacionAdapter.ViewHolder>  {
 
     private ArrayList<CitasMedicasModel> citasMedicasModels;
+    private UserController userController;
+
+    private  ArrayList<String>arrayList = userController.consultarCitasSQL();
 
 
     // Constructor
-    public  NotificacionAdapter(ArrayList<CitasMedicasModel> citasMedicasModels) {
+    public  NotificacionAdapter(ArrayList<String> arrayList) {
         this.citasMedicasModels = citasMedicasModels;
     }
 

@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import co.com.citasmedicasinimuto.Controler.UserController;
 import co.com.citasmedicasinimuto.Model.CitasMedicasModel;
 import co.com.citasmedicasinimuto.R;
 import co.com.citasmedicasinimuto.databinding.FragmentNotificationsBinding;
@@ -25,6 +26,8 @@ public class NotificationsFragment extends Fragment {
 
     private FragmentNotificationsBinding binding;
     ArrayList<CitasMedicasModel> citasMedicasModels;
+
+    private UserController userController;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         NotificationsViewModel notificationsViewModel =
@@ -34,16 +37,21 @@ public class NotificationsFragment extends Fragment {
 
         View root = binding.getRoot();
 
-
+        userController = new UserController();
         final RecyclerView recyclerView = binding.rvDescriptions;
+        boolean registroExitoso = userController.connectSQL();
+        if (registroExitoso){
+            ArrayList<String>arrayList = userController.consultarCitasSQL();
 
+            NotificacionAdapter listAdapter = new NotificacionAdapter(arrayList);
+            recyclerView.setAdapter(listAdapter);
+        }
 
         recyclerView.findViewById(R.id.rvDescriptions);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
-        populatePersons();
-        NotificacionAdapter listAdapter = new NotificacionAdapter(citasMedicasModels);
-        recyclerView.setAdapter(listAdapter);
+       // populatePersons();
+
 
 
 
@@ -53,11 +61,13 @@ public class NotificationsFragment extends Fragment {
 
     public void populatePersons(){
         citasMedicasModels = new ArrayList<>();
-        citasMedicasModels.add(new CitasMedicasModel("12/08/2023","cita medica para mi hijo ","chico norte","calle 49 # 10D-20","Medicina General"));
+
+
+       /* citasMedicasModels.add(new CitasMedicasModel("12/08/2023","cita medica para mi hijo ","chico norte","calle 49 # 10D-20","Medicina General"));
         citasMedicasModels.add(new CitasMedicasModel("18/08/2023","cita medica optometrìa","chico norte","calle 49 # 10D-20","Optometrìa"));
         citasMedicasModels.add(new CitasMedicasModel("17/08/2023","cita medica odontologìa","chico norte","calle 3a # 34-55 ","Odontologìa"));
         citasMedicasModels.add(new CitasMedicasModel("14/08/2023","cita medica medicina general","chico norte","calle 88 # 10 sur 22-20","Medicina General"));
-
+*/
     }
 
     @Override

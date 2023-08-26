@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">CitasMedicasInimuto</string>
     <string name="title_app">Citas Medicas </string>
-    <string name="ingresar">Ingrisar </string>
+    <string name="ingresar">Ingresar </string>
 
     <string name="user"> Correo </string>
     <string name="password">Contraseña </string>
@@ -21,5 +21,10 @@
     <string name="guardar">Agendar </string>
     <string name="bienvenido">Bienvenido </string>
 
+    <string name="title_registro">Registrate </string>
+
+    <string name="names">Nombres </string>
+
+    <string name="btn_registrarse">Registrate</string>
 
 </resources>

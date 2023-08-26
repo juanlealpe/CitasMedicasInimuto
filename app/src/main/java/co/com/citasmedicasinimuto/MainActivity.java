@@ -14,12 +14,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import co.com.citasmedicasinimuto.Ui.dasboard.DasdBoardActivity;
+import co.com.citasmedicasinimuto.Ui.register.RegisterActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppCompatButton agendar;
     private EditText user;
     private  EditText password;
+    private AppCompatButton registar;
 
 
     @Override
@@ -39,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        registar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void inicializacionCampos(){
@@ -46,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         agendar = findViewById(R.id.btn_agendar);
         user =findViewById(R.id.editTextEmail);
         password = findViewById(R.id.editTextPassword);
+        registar = findViewById(R.id.btn_registrar);
 
     }
 
